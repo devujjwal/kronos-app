@@ -2,10 +2,16 @@ import { useNavigate } from "react-router-dom";
 import AuthLayout from "@/components/AuthLayout";
 import styles from "@/styles/login.module.scss";
 import usePageTitle from "@/hooks/usePageTitle";
+import { supabase } from "@/lib/supabaseClient";
 
 const RequestAccess = () => {
   const navigate = useNavigate();
   usePageTitle("Request Access");
+
+  const handleBackToLogin = async () => {
+    await supabase.auth.signOut();
+    navigate("/");
+  };
 
   return (
     <AuthLayout>
@@ -23,7 +29,7 @@ const RequestAccess = () => {
         </div>
 
         <button
-          onClick={() => navigate("/")}
+          onClick={handleBackToLogin}
           className={styles.googleBtn}
           style={{ marginTop: "24px" }}
         >
@@ -37,7 +43,7 @@ const RequestAccess = () => {
             alt="ET AI"
             className={styles.logo}
             style={{ cursor: "pointer" }}
-            onClick={() => navigate("/")}
+            onClick={handleBackToLogin}
           />
         </div>
       </div>
