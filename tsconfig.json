@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".", // Required to use relative root paths
+    "paths": {
+      "@/*": ["src/*"] // This maps "@/components" to "src/components"
+    }
+  }
+}

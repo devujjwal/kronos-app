@@ -1,0 +1,203 @@
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.leftPanel {
+  background: linear-gradient(180deg, #051138 0%, #0c1a52 100%);
+  color: white;
+  width: 40%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+}
+
+.contentCenter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #ffc940;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.productLogo {
+  height: 18px;
+  opacity: 0.7;
+  margin-top: 40px;
+}
+
+.rightPanel {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+.loginBox {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.googleBtn {
+  width: 100%;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+
+  span {
+    padding: 0 10px;
+    color: #888;
+    font-size: 14px;
+  }
+
+  hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+}
+
+.requestBox {
+  background-color: #fff4dc;
+  border: 1px solid #ffd28b;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+
+  a {
+    color: #0072f5;
+    text-decoration: underline;
+  }
+}
+
+.powered {
+  margin-top: 40px;
+  font-size: 12px;
+  color: #999;
+
+  img {
+    display: block;
+    margin: 6px auto;
+    height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 50px; // space for bottom bar
+  }
+
+  .leftPanel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #0c1a52;
+    padding: 0 16px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .rightPanel {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    min-height: calc(100vh - 50px); // fill full height minus footer
+    background: #ffffff;
+  }
+
+  .logo,
+  .contentCenter,
+  .subtitle {
+    display: none;
+  }
+
+  .productLogo {
+    height: 18px;
+    opacity: 0.8;
+    margin: 0;
+    align-self: center;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
